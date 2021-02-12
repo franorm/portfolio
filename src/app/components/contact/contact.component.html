@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="contact.component.css"/>
+<div class="content">
+	<h2 class="titleContact">Puedes seguirme en mis redes sociales</h2>
+	<hr>
+		<ul class="media">
+			<li>
+				<a (click)="goToInstagram()"><img src="../../assets/css/instagram.png"></a>
+			</li>
+			<li>
+				<a (click)="goToFacebook()"><img src="../../assets/css/facebook.png"></a>
+			</li>
+			<li>
+				<a (click)="goToLinkedin()"><img src="../../assets/css/linkedin.png"></a>
+			</li>
+		</ul>
+
+	<h2 class="titleContact">O también puedes enviarme un mail</h2>
+	<hr>
+	<div class="form-container">
+		<form id="contact" #contactForm='ngForm' (ngSubmit)=onSubmit(contactForm)>
+			<input name="name" type="text" [(ngModel)]=name placeholder="Nombre" required/><br>
+
+			<input name="email" type="email" [(ngModel)]=email placeholder="Email" required/><br>
+
+			<input name="subject" type="text" [(ngModel)]=subject placeholder="Asunto" required/><br>
+
+			<textarea name="message" [(ngModel)]=message placeholder="Mensaje" required></textarea><br>
+
+			
+			<input type="submit" value="Enviar" [disabled]="!contactForm.form.valid"/><br>
+		</form>
+	</div>
+</div> 

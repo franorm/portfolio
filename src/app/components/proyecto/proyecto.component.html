@@ -1,0 +1,10 @@
+<div class="content">
+	<h2>{{project.name}}</h2>
+	<hr>
+	<span>Lenguajes usados: {{project.langs}}</span>
+	<p id="description">{{project.description}}</p>
+	<span>Si quieres ver el proyecto y probarlo, puedes hacer click en el siguiente <a (click)="goToUrl()">link</a></span>
+	<div class="image">
+		<img src="{{url+'get-image-project/'+project.image}}" class="image-project">
+	</div>
+</div> 

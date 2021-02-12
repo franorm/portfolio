@@ -1,0 +1,18 @@
+<div class="bg-text" style="width: 80%; height: 60%; overflow-y: scroll;">
+	<h2>{{title}}</h2>
+
+	<form #signinForm='ngForm' (ngSubmit)="onSubmit(signinForm)">
+
+		<p>
+			<label for="email">Email: </label>
+			<input type="text" name="email" #name="ngModel" [(ngModel)]="email" required>
+		</p>
+		<p>
+			<label for="password">Contraseña: </label>
+			<input type="password" name="password" #description="ngModel" [(ngModel)]="password" required>
+		</p>
+		
+
+		<input type="submit" value="Enviar" [disabled]="!signinForm.form.valid">
+	</form>
+</div>

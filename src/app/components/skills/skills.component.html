@@ -1,0 +1,14 @@
+<div class="bg-text" style="width: 80%; height: 60%; overflow-y: scroll;">
+  <h1>Habilidades y competencias</h1>
+  <p>Aquí verás un listado de cada una de mis competencias</p>
+  <hr>
+	<ul>
+		<li *ngFor = 'let skill of skills' class="skill">
+				<img src="{{url+'get-image/'+skill.image}}" class="logo-skill">
+				<h3>{{skill.name}}</h3>
+				<span>Nivel: {{skill.level}}/5</span>
+				<p>{{skill.description}}</p>
+		</li>
+	</ul>
+
+</div> 

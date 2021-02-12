@@ -1,0 +1,19 @@
+<div class="bg-text" style="width: 80%; height: 60%; overflow-y: scroll;">
+  <h1>Proyectos</h1>
+  <p>Aquí verás un listado de cada uno de los proyectos que he hecho, con el tiempo los iré actualizando y añadiré más</p>
+  <hr>
+	<ul>
+		<li *ngFor = 'let project of projects' class="project">
+			<a [routerLink]="['/project', project._id]" class="link-project">
+			<div id="icon-project" [ngSwitch]='project.category'>
+				<img src="../../assets/css/desarrollo-web.png" *ngSwitchCase ="'Desarrollo web'" class="logo-project">
+				<img src="../../assets/css/inteligencia-artificial.png" *ngSwitchCase ="'Inteligencia Artificial'" class="logo-project">
+				<img src="../../assets/css/escritorio.png" *ngSwitchCase ="'Escritorio'" class="logo-project">
+			</div>
+				<h3>{{project.name}}</h3>
+				<p>{{project.category}}</p>
+			</a>
+		</li>
+	</ul>
+
+</div> 
